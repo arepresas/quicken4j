@@ -5,38 +5,22 @@
     <servers>
         <server>
             <id>sonatype-nexus-staging</id>
-            <username>${OSSRH_USERNAME}</username>
-            <password>${OSSRH_TOKEN}</password>
+            <username>${env.OSSRH_USERNAME}</username>
+            <password>${env.OSSRH_TOKEN}</password>
         </server>
     </servers>
 
     <profiles>
         <profile>
-            <id>ossrh-release</id>
+            <id>ossrh</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <gpg.executable>gpg</gpg.executable>
-                <!--
-                  The GPG key name to use for signing. You can find this by running:
-                  gpg --list-secret-keys --keyid-format LONG
-                  Use the 8-character key ID from the 'sec' line (e.g., 4F9A9F9E).
-                -->
                 <gpg.keyname>EF395C0B33973673</gpg.keyname>
-                <!--
-                  It is highly recommended to configure gpg-agent to cache your passphrase
-                  so you don't have to enter it manually or store it in plaintext.
-                  If you must store it, uncomment the line below.
-                -->
-                <!-- <gpg.passphrase>your-gpg-passphrase</gpg.passphrase> -->
             </properties>
         </profile>
     </profiles>
-
-    <activeProfiles>
-        <!--
-          This automatically activates the GPG signing profile, so you don't
-          have to specify '-P ossrh-release' on the command line.
-        -->
-        <activeProfile>ossrh-release</activeProfile>
-    </activeProfiles>
 
 </settings>
