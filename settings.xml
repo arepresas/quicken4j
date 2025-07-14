@@ -4,7 +4,7 @@
 
     <servers>
         <server>
-            <id>sonatype-nexus-staging</id>
+            <id>sonatype-central</id>
             <username>${OSSRH_USERNAME}</username>
             <password>${OSSRH_TOKEN}</password>
         </server>
