@@ -4,7 +4,7 @@
 
   <groupId>top.arepresas</groupId>
   <artifactId>quicken4j</artifactId>
-  <version>0.0.3-SNAPSHOT</version>
+  <version>0.0.3</version>
   <packaging>jar</packaging>
 
   <name>quicken4j</name>
@@ -35,7 +35,7 @@
     <connection>scm:git:git@github.com:arepresas/quicken4j.git</connection>
     <developerConnection>scm:git:git@github.com:arepresas/quicken4j.git</developerConnection>
     <url>https://github.com/arepresas/quicken4j</url>
-    <tag>HEAD</tag>
+    <tag>quicken4j-0.0.3</tag>
   </scm>
 
   <!--
